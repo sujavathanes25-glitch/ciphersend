@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1783840709153",
+    "owner": "raju",
+    "originalName": "Personalized_Study_Assistant_with_RAG_Final.pptx",
+    "storedName": "1783840709149_Personalized_Study_Assistant_with_RAG_Final.pptx.enc",
+    "iv": "4a07d7dcae27cfddf19b81a4692a8e7a",
+    "size": 37940,
+    "uploadedAt": "2026-07-12T07:18:29.153Z"
+  },
+  {
+    "id": "1784795513485",
+    "owner": "padi",
+    "originalName": "Screenshot (1).png",
+    "storedName": "1784795513312_Screenshot (1).png.enc",
+    "iv": "658b48678d92aa24acad545689f630c6",
+    "size": 110477,
+    "uploadedAt": "2026-07-23T08:31:53.485Z",
+    "secretCodeHash": "$2b$10$/BAJyVzAeUTs6EdwucHxaupk5Y11956yz90amyTjbvJbdjMc8GOVG",
+    "expiresAt": "2026-07-23T08:41:53.482Z",
+    "maxDownloads": 1,
+    "downloadCount": 0,
+    "opened": false,
+    "openedAt": null
+  },
+  {
+    "id": "1787371269955",
+    "owner": "sujavathane",
+    "originalName": "Screenshot 2025-08-08 202643.png",
+    "storedName": "1787371269743_Screenshot 2025-08-08 202643.png.enc",
+    "iv": "e1ce31358848d8b779c74d69bef28baa",
+    "size": 506363,
+    "uploadedAt": "2026-08-22T04:01:09.955Z",
+    "secretCodeHash": "$2b$10$Dloxmhk1y6cl6mZMh6smbeP02wcPymK9ZR68HJ8VWY74nzcU4umsG",
+    "expiresAt": "2026-08-23T04:01:09.954Z",
+    "maxDownloads": null,
+    "downloadCount": 0,
+    "opened": false,
+    "openedAt": null
+  }
+]

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CipherSend - Receive a File</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dash-page">
+    <div class="dash-header">
+      <div class="logo">🛡️ Cipher<span class="accent">Send</span></div>
+      <div class="user-info">
+        <span id="welcomeUser">Welcome!</span>
+        <button id="backBtn" class="logout-btn" style="background: rgba(124,140,255,0.15); color:#7c8cff; border-color: rgba(124,140,255,0.4);">⬅ Menu</button>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </div>
+
+    <div class="dash-card">
+      <h2>📥 Receive a File</h2>
+      <p class="subtitle">Enter the File ID and secret code the sender shared with you</p>
+
+      <div class="upload-options">
+        <div class="option-field">
+          <label for="fileIdInput">File ID</label>
+          <input type="text" id="fileIdInput" placeholder="e.g. 1732345678901" required />
+        </div>
+
+        <div class="option-field">
+          <label for="secretCodeInput">Secret Code</label>
+          <input type="text" id="secretCodeInput" placeholder="Ask the sender for this code" required />
+        </div>
+      </div>
+
+      <button id="unlockBtn" class="login-btn" style="margin-top:20px; width:auto; padding:12px 24px;">🔓 Unlock & Download</button>
+      <p id="receiveMsg" class="error-msg"></p>
+    </div>
+  </div>
+
+  <script src="receive.js"></script>
+</body>
+</html>

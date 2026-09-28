@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CipherSend - Choose Action</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="role.css" />
+</head>
+<body>
+  <div class="role-page">
+    <div class="logo">🛡️ Cipher<span class="accent">Send</span></div>
+    <h2>What would you like to do, <span id="roleUsername"></span>?</h2>
+    <p class="subtitle">Choose an option below to continue</p>
+
+    <div class="role-options">
+      <div class="role-card" id="sendCard">
+        <div class="role-icon">📤</div>
+        <h3>Send a File</h3>
+        <p>Upload and encrypt a file, then share a secure link and code with someone.</p>
+      </div>
+
+      <div class="role-card" id="receiveCard">
+        <div class="role-icon">📥</div>
+        <h3>Receive a File</h3>
+        <p>Enter a File ID and secret code someone shared with you to unlock a file.</p>
+      </div>
+    </div>
+
+    <button id="logoutBtn" class="logout-link">Logout</button>
+  </div>
+
+  <script src="role.js"></script>
+</body>
+</html>

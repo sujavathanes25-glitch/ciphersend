@@ -1,0 +1,175 @@
+.dash-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  color: white;
+}
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dash-header .logo {
+  margin-right: 40px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #ccc;
+  margin-left: auto;
+}
+
+.logout-btn {
+  background: rgba(255, 107, 107, 0.15);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 107, 107, 0.25);
+}
+
+.dash-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.dash-card h2 {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: #a3a3c2;
+  font-size: 14px;
+}
+
+.upload-box {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.upload-box input[type="file"] {
+  flex: 1;
+  color: #ccc;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.upload-box .login-btn {
+  width: auto;
+  padding: 12px 20px;
+}
+
+.files-list {
+  margin-top: 15px;
+}
+
+.empty-msg {
+  color: #777;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.file-name {
+  font-weight: bold;
+}
+
+.file-meta {
+  color: #999;
+  font-size: 12px;
+}
+
+.download-btn {
+  background: linear-gradient(90deg, #4a6ef2, #8a5cf6);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.upload-options {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+#uploadBtn {
+  margin-top: 20px;
+  width: auto;
+  padding: 12px 24px;
+}
+
+.option-field label {
+  color: #ccc;
+  font-size: 13px;
+  margin-bottom: 6px; 
+  display: block;
+}
+
+.option-field input,
+.option-field select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.share-result {
+  margin-top: 18px;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 14px;
+  color: #cfe;
+  word-break: break-all;
+}
+
+.share-result strong {
+  color: #4ade80;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.status-opened {
+  background: rgba(74, 222, 128, 0.15);
+  color: #4ade80;
+}
+
+.status-notopened {
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffd668;
+}

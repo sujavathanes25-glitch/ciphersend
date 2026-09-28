@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CipherSend - Receive File</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="card" style="max-width: 500px;">
+      <div class="right-panel" style="flex: 1;">
+        <h2>🔐 Secure File Received</h2>
+        <p class="subtitle" id="fileNameDisplay">Checking link...</p>
+
+        <div id="accessBox" style="display:none;">
+          <label for="codeInput">Enter the Secret Code</label>
+          <input type="text" id="codeInput" placeholder="Ask the sender for this code" required />
+
+          <p id="accessMsg" class="error-msg"></p>
+
+          <button id="unlockBtn" class="login-btn">🔓 Unlock & Download</button>
+        </div>
+
+        <div id="errorBox" style="display:none;">
+          <p id="errorText" class="error-msg" style="font-size: 15px;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="share.js"></script>
+</body>
+</html>

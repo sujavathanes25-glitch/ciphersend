@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CipherSend - Secure File Sharing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <div class="left-panel">
+        <div class="logo">🛡️ Cipher<span class="accent">Send</span></div>
+        <p class="tagline">Secure File Sharing Platform</p>
+        <hr class="divider" />
+        <p class="description">
+          Share files securely with end-to-end encryption, AES-256 protection, and virus scanning.
+        </p>
+
+        <div class="feature">
+          <span class="feature-icon">🔒</span>
+          <div>
+            <h4>End-to-End Encryption</h4>
+            <p>Your files are protected with AES-256 encryption.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🛡️</span>
+          <div>
+            <h4>Virus Scanning</h4>
+            <p>All files are scanned to keep your data safe.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">☁️</span>
+          <div>
+            <h4>Secure & Reliable</h4>
+            <p>Fast, secure and reliable file sharing you can trust.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-panel">
+
+        <!-- LOGIN FORM -->
+        <div id="loginView">
+          <h2>Welcome Back 👋</h2>
+          <p class="subtitle">Login to access your secure files</p>
+
+          <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required />
+
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="password" placeholder="Enter your password" required />
+              <span id="togglePassword" class="toggle-eye">👁️</span>
+            </div>
+
+            <div class="row-between">
+              <label class="checkbox-label">
+                <input type="checkbox" id="rememberMe" /> Remember me
+              </label>
+              <a href="#" id="showForgot" class="link">Forgot Password?</a>
+            </div>
+
+            <p id="errorMsg" class="error-msg"></p>
+
+            <button type="submit" class="login-btn">🛡️ Secure Login</button>
+          </form>
+
+          <div class="or-divider"><span>OR</span></div>
+
+          <p class="create-account">
+            Don't have an account? <a href="#" id="showRegister" class="link">Create Account</a>
+          </p>
+        </div>
+        <!-- FORGOT PASSWORD FORM -->
+        <div id="forgotView" style="display: none;">
+          <h2>Reset Password 🔑</h2>
+          <p class="subtitle">Enter your username and a new password</p>
+
+          <form id="forgotForm">
+            <label for="forgotUsername">Username</label>
+            <input type="text" id="forgotUsername" placeholder="Enter your username" required />
+
+            <label for="newPassword">New Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="newPassword" placeholder="Enter new password" required />
+              <span id="toggleNewPassword" class="toggle-eye">👁️</span>
+            </div>
+
+            <p id="forgotMsg" class="error-msg"></p>
+
+            <button type="submit" class="login-btn">🔄 Reset Password</button>
+          </form>
+
+          <p class="create-account">
+            Remembered it? <a href="#" id="showLoginFromForgot" class="link">Back to Login</a>
+          </p>
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div id="registerView" style="display: none;">
+          <h2>Create Account ✨</h2>
+          <p class="subtitle">Sign up to start sharing files securely</p>
+
+          <div class="warning-box">
+            ⚠️ Remember your username carefully! You will <strong>not</strong> be able to log in without it. There is no recovery option.
+          </div>
+
+          <form id="registerForm">
+            <label for="regUsername">Choose a Username</label>
+            <input type="text" id="regUsername" placeholder="Pick a username you'll remember" required />
+
+            <label for="regPassword">Choose a Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="regPassword" placeholder="Create a password" required />
+              <span id="toggleRegPassword" class="toggle-eye">👁️</span>
+            </div>
+
+            <p id="registerMsg" class="error-msg"></p>
+
+            <button type="submit" class="login-btn">✅ Create Account</button>
+          </form>
+
+          <p class="create-account">
+            Already have an account? <a href="#" id="showLogin" class="link">Back to Login</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

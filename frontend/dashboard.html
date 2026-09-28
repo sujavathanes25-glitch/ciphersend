@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CipherSend - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dash-page">
+    <div class="dash-header">
+      <div class="logo">Cipher<span class="accent">Send</span></div>
+      <div class="user-info">
+        <span id="welcomeUser">Welcome!</span>
+        <button id="backBtn" class="logout-btn" style="background: rgba(124,140,255,0.15); color:#7c8cff; border-color: rgba(124,140,255,0.4);">⬅ Menu</button>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </div>
+
+    <div class="dash-card">
+      <h2>Upload a File</h2>
+      <p class="subtitle">Your file will be encrypted with AES-256 before storage</p>
+
+      <div class="upload-box">
+        <input type="file" id="fileInput" />
+      </div>
+
+      <div class="upload-options">
+        <div class="option-field">
+          <label for="secretCode">Secret Code (receiver needs this to unlock the file)</label>
+          <input type="text" id="secretCode" placeholder="e.g. blue-owl-42" required />
+        </div>
+
+        <div class="option-field">
+          <label for="expirySelect">Link expires after</label>
+          <select id="expirySelect">
+            <option value="10">10 minutes</option>
+            <option value="60">1 hour</option>
+            <option value="1440" selected>1 day</option>
+            <option value="10080">7 days</option>
+            <option value="0">Never</option>
+          </select>
+        </div>
+
+        <div class="option-field">
+          <label for="maxDownloads">Max number of downloads</label>
+          <input type="number" id="maxDownloads" placeholder="Leave empty for unlimited" min="1" />
+        </div>
+      </div>
+
+      <button id="uploadBtn" class="login-btn">🔒 Encrypt & Upload</button>
+      <p id="uploadMsg" class="error-msg"></p>
+
+      <div id="shareResult" class="share-result" style="display:none;"></div>
+    <div class="dash-card">
+      <h2>Your Files</h2>
+      <div id="filesList" class="files-list">
+        <p class="empty-msg">No files uploaded yet.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
