@@ -68,11 +68,13 @@ uploadBtn.addEventListener('click', async () => {
 
     const shareLink = window.location.href.replace('dashboard.html', `share.html?id=${data.file.id}`);
 
-    shareResult.style.display = 'block';
+       shareResult.style.display = 'block';
     shareResult.innerHTML = `
-      <strong>Send these two things to the receiver separately:</strong><br><br>
-      🔗 Link: ${shareLink}<br>
-      🔑 Secret Code: ${secretCode}
+      <strong>Send these details to the receiver separately:</strong><br><br>
+       File ID: <code id="newFileId">${data.file.id}</code>
+      <button type="button" onclick="copyText('${data.file.id}', this)" style="margin-left:8px; cursor:pointer;">📋 Copy</button><br>
+       Link: ${shareLink}<br>
+       Secret Code: ${secretCode}
     `;
 
     fileInput.value = '';
@@ -105,8 +107,8 @@ async function loadFiles() {
 
     filesList.innerHTML = data.files.map(f => {
       const statusBadge = f.opened
-        ? `<span class="status-badge status-opened">✅ Opened on ${new Date(f.openedAt).toLocaleString()}</span>`
-        : `<span class="status-badge status-notopened">⏳ Not opened yet</span>`;
+        ? `<span class="status-badge status-opened">Opened on ${new Date(f.openedAt).toLocaleString()}</span>`
+        : `<span class="status-badge status-notopened"> Not opened yet</span>`;
 
       const expiryText = f.expiresAt
         ? `Expires: ${new Date(f.expiresAt).toLocaleString()}`
@@ -122,6 +124,10 @@ async function loadFiles() {
             <div>
               <div class="file-name">${f.originalName}</div>
               <div class="file-meta">${(f.size / 1024).toFixed(1)} KB • ${new Date(f.uploadedAt).toLocaleString()}</div>
+                            <div class="file-meta">
+                File ID: <code>${f.id}</code>
+                <button type="button" onclick="copyText('${f.id}', this)" style="margin-left:6px; cursor:pointer;"></button>
+              </div>
               <div class="file-meta">${expiryText} • ${downloadsText}</div>
             </div>
             <button class="download-btn" onclick="downloadFile('${f.id}', '${f.originalName}')">⬇ My Copy</button>
@@ -157,6 +163,14 @@ async function downloadFile(id, name) {
   } catch (err) {
     alert('Could not connect to server');
   }
+}
+// Copy text to clipboard and show quick feedback on the button
+function copyText(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const original = btn.textContent;
+    btn.textContent = ' Copied';
+    setTimeout(() => { btn.textContent = original; }, 1500);
+  });
 }
 
 loadFiles();

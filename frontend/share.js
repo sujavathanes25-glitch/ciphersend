@@ -27,12 +27,12 @@ async function checkFileInfo() {
     }
 
     if (data.expired) {
-      showError('⏰ This link has expired. Ask the sender to share the file again.');
+      showError('This link has expired. Ask the sender to share the file again.');
       return;
     }
 
     if (data.limitReached) {
-      showError('🚫 This file has already reached its download limit.');
+      showError('This file has already reached its download limit.');
       return;
     }
 
